@@ -257,3 +257,374 @@ Here’s a quick recap of the covered topics:
 5. **Hyperlinks**: Create navigation with `<a>` tags.  
 6. **Images**: Insert and customize images with `<img>`.  
 
+# **Inserting Images in HTML**  
+
+The `<img>` tag is used to embed images into a webpage. It is a self-closing tag and requires specific attributes to work effectively.
+
+---
+
+### **Key Attributes of the `<img>` Tag**  
+1. **`src` (Source)**: Specifies the path to the image file.  
+   - It can be an absolute URL (e.g., `https://example.com/image.jpg`) or a relative path (e.g., `images/photo.jpg`).  
+
+2. **`alt` (Alternative Text)**: Provides a text description for the image.  
+   - Useful for accessibility (screen readers) and when the image fails to load.  
+
+3. **`width` and `height`**: Define the dimensions of the image.  
+   - Can be set in pixels (`px`) or percentages (`%`).  
+
+---
+
+### **Example 1: Basic Image Tag**  
+```html
+<img src="image.jpg" alt="Beautiful Landscape" width="600" height="400">
+```
+
+#### Explanation:
+- `src`: The image file is located in the same folder.  
+- `alt`: Displays "Beautiful Landscape" if the image doesn’t load.  
+- `width` & `height`: Set the size of the image to 600px by 400px.
+
+---
+
+### **Example 2: Using External Image URL**  
+```html
+<img src="https://via.placeholder.com/300" alt="Placeholder Image" width="300" height="300">
+```
+
+#### Output:  
+- Displays a placeholder image with 300px width and height.
+
+---
+
+### **Example 3: Responsive Images (Only Width)**  
+```html
+<img src="responsive.jpg" alt="Responsive Design" width="100%">
+```
+
+#### Explanation:
+- Setting the width to `100%` makes the image scale to fit its container, ensuring responsiveness.  
+
+---
+
+### **Example 4: Decorative Images**  
+For purely decorative images, you can leave the `alt` attribute empty to indicate they do not need a description:  
+```html
+<img src="decorative.png" alt="" width="200" height="200">
+```
+
+---
+
+### **Example 5: Adding Images Inside a Figure**  
+To provide a caption for the image:  
+```html
+<figure>
+  <img src="nature.jpg" alt="Nature View" width="500">
+  <figcaption>A serene view of nature.</figcaption>
+</figure>
+```
+
+---
+
+### **Good Practices for Using Images in HTML**  
+1. Always include an `alt` attribute for accessibility and SEO.  
+2. Optimize image size to reduce page loading time.  
+3. Use responsive images (`width: 100%`) for mobile-friendly designs.  
+4. Use descriptive file names and organize images in a dedicated folder (e.g., `/images`).  
+
+---
+
+### **Summary**  
+The `<img>` tag is a powerful tool for embedding images on a webpage. By leveraging its attributes—`src`, `alt`, `width`, and `height`—you can create accessible, responsive, and visually appealing designs.
+
+# 📋 Tables and Forms in HTML  
+
+Tables and forms are essential for structuring data and collecting user input in a webpage. Let’s explore their key features with examples and explanations! 🚀  
+
+---
+
+## **1. Structuring Data with Tables**  
+
+### 🏗️ **Basic Table Structure**  
+Tables are created using the `<table>` tag and contain rows (`<tr>`) and cells (`<th>` for headers, `<td>` for data).  
+
+#### Example:  
+```html
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Vijay</td>
+    <td>25</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td>Pratham</td>
+    <td>22</td>
+    <td>Mumbai</td>
+  </tr>
+</table>
+```
+
+#### Output:  
+| **Name**    | **Age** | **City**   |  
+|-------------|---------|------------|  
+| Vijay       | 25      | Delhi      |  
+| Pratham     | 22      | Mumbai     |  
+
+---
+
+### 🖋️ **Table Captions and Attributes**  
+- **`<caption>`**: Adds a title to the table.  
+- **`colspan`**: Merges multiple columns.  
+- **`rowspan`**: Merges multiple rows.  
+
+#### Example:  
+```html
+<table border="1">
+  <caption>Employee Data</caption>
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Contact</th>
+  </tr>
+  <tr>
+    <td>Vijay</td>
+    <td>vijay@example.com</td>
+    <td>+91 9876543210</td>
+  </tr>
+  <tr>
+    <td>Pratham</td>
+    <td colspan="2">pratham@example.com</td>
+  </tr>
+</table>
+```
+
+#### Output:  
+**Employee Data**  
+| **Name**    | **Contact**           | **Phone**         |  
+|-------------|-----------------------|-------------------|  
+| Vijay       | vijay@example.com     | +91 9876543210    |  
+| Pratham     | pratham@example.com   |                   |  
+
+---
+
+## **2. Creating Forms**  
+
+Forms collect user input with controls like text boxes, checkboxes, dropdowns, and buttons.  
+
+### ✍️ **Basic Form Structure**  
+A form is created using the `<form>` tag, and controls like `<input>`, `<textarea>`, `<select>`, and `<button>` are added inside it.  
+
+#### Example:  
+```html
+<form action="/submit" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name"><br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password"><br><br>
+  
+  <button type="submit">Submit</button>
+</form>
+```
+
+#### Explanation:  
+- **`action`**: URL where form data is sent.  
+- **`method`**: HTTP method (`POST` or `GET`).  
+- Includes text, email, and password input fields.  
+
+---
+
+### 🔘 **Form Controls**  
+
+1. **Text Input**: Collects short text.  
+   ```html
+   <input type="text" name="username">
+   ```
+2. **Textarea**: Collects longer text.  
+   ```html
+   <textarea name="comments" rows="4" cols="50"></textarea>
+   ```
+3. **Dropdown (Select)**: Provides a dropdown menu.  
+   ```html
+   <select name="gender">
+     <option value="male">Male</option>
+     <option value="female">Female</option>
+   </select>
+   ```
+4. **Checkbox**: Allows multiple selections.  
+   ```html
+   <input type="checkbox" name="subscribe" value="newsletter"> Subscribe
+   ```
+5. **Radio Button**: Allows single selection.  
+   ```html
+   <input type="radio" name="gender" value="male"> Male
+   <input type="radio" name="gender" value="female"> Female
+   ```
+6. **Submit Button**: Submits the form.  
+   ```html
+   <button type="submit">Submit</button>
+   ```
+
+---
+
+### **3. Example: Complete Form with Various Controls**  
+```html
+<form action="/register" method="POST">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  
+  <label>Gender:</label>
+  <input type="radio" name="gender" value="male"> Male
+  <input type="radio" name="gender" value="female"> Female<br><br>
+  
+  <label for="city">City:</label>
+  <select id="city" name="city">
+    <option value="delhi">Delhi</option>
+    <option value="mumbai">Mumbai</option>
+  </select><br><br>
+  
+  <label for="comments">Comments:</label><br>
+  <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+  
+  <input type="checkbox" name="agree" value="yes"> I agree to the terms<br><br>
+  
+  <button type="submit">Register</button>
+</form>
+```
+
+---
+
+### **Summary of Tables and Forms**  
+| **Feature**            | **Tags/Attributes**                                                                                     | **Description**                                                                                                                                       |  
+|-------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|  
+| **Tables**              | `<table>, <tr>, <th>, <td>`                                                                            | Structure tabular data.                                                                                                                               |  
+| **Table Attributes**    | `colspan`, `rowspan`, `<caption>`                                                                      | Merge cells or add a table title.                                                                                                                     |  
+| **Forms**               | `<form>, <input>, <textarea>, <select>, <button>`                                                      | Collect user inputs.                                                                                                                                  |  
+| **Form Input Types**    | `text`, `email`, `password`, `checkbox`, `radio`, `submit`                                             | Define input controls for specific types of data.                                                                                                     |  
+
+Tables and forms are key components of HTML, helping to display data and gather user information efficiently. 🚀
+
+# HTML Best Practices & Embedding Media
+
+This repository provides a collection of HTML examples and best practices, including how to embed video, audio, and other content, as well as tips for responsive design, accessibility, and SEO optimization.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Embedding Video & Audio](#embedding-video--audio)
+- [Embedding Content from Other Sources](#embedding-content-from-other-sources)
+- [Responsive Design & Accessibility](#responsive-design--accessibility)
+- [SEO Basics & Meta Tags](#seo-basics--meta-tags)
+- [HTML Validation](#html-validation)
+- [Best Practices for Clean, Maintainable Code](#best-practices-for-clean-maintainable-code)
+
+## Introduction
+This guide demonstrates the correct usage of HTML5 elements, including embedding media like video and audio, as well as ensuring your code is responsive, accessible, and SEO-friendly. Follow the practices outlined in this document to build clean and maintainable HTML code.
+
+## Embedding Video & Audio
+
+### Video
+To embed a video, use the `<video>` element with the `controls` attribute for playback controls. Supported formats include `.mp4`, `.webm`, and `.ogg`.
+
+```html
+<video width="600" controls autoplay loop>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+
+### Audio
+To embed audio, use the `<audio>` element with the `controls` attribute. Supported formats include `.mp3`, `.ogg`, and `.wav`.
+
+```html
+<audio controls autoplay loop>
+  <source src="audio.mp3" type="audio/mp3">
+  <source src="audio.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+```
+
+## Embedding Content from Other Sources
+
+### iFrames
+To embed external content such as YouTube videos, Google Maps, or other web applications, use the `<iframe>` element.
+
+```html
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+```
+
+### Embed and Object Tags
+The `<embed>` and `<object>` elements can also be used for embedding various media types or interactive content.
+
+```html
+<embed src="flashmovie.swf" width="600" height="400">
+```
+
+```html
+<object data="movie.swf" type="application/x-shockwave-flash" width="600" height="400"></object>
+```
+
+## Responsive Design & Accessibility
+To ensure your web pages are responsive and accessible across various devices and for all users, follow these best practices:
+
+1. **Viewport Meta Tag**: Include the viewport meta tag to make your website responsive on mobile devices.
+   
+   ```html
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   ```
+
+2. **Use Semantic HTML**: Use appropriate HTML elements (e.g., `<header>`, `<footer>`, `<article>`) for better accessibility and SEO.
+3. **Alt Text for Images**: Always provide descriptive alt text for images using the `alt` attribute.
+   
+   ```html
+   <img src="image.jpg" alt="Description of the image">
+   ```
+
+4. **Keyboard Navigation**: Ensure your site is navigable using the keyboard by adding proper tabindex and ensuring form controls are properly labeled.
+
+## SEO Basics & Meta Tags
+
+Use meta tags to improve search engine indexing and provide metadata about your website.
+
+```html
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="A description of your webpage for better SEO.">
+  <meta name="keywords" content="HTML, SEO, web design">
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Web Page Title</title>
+</head>
+```
+
+## HTML Validation
+To ensure your HTML code is clean and error-free, use the [W3C HTML Validator](https://validator.w3.org/). This tool will help you identify and fix issues with your HTML structure, syntax, and accessibility.
+
+## Best Practices for Clean, Maintainable Code
+
+1. **Indentation**: Use consistent indentation (2 or 4 spaces) for better readability.
+2. **Commenting**: Add comments to explain complex code sections.
+3. **Consistent Naming Conventions**: Use meaningful class and id names to make your code more understandable.
+
+Example:
+
+```html
+<!-- Main Navigation -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+  </ul>
+</nav>
+```
