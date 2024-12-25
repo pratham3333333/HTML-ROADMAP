@@ -628,3 +628,122 @@ Example:
   </ul>
 </nav>
 ```
+
+# HTML Interview Questions
+
+
+## General HTML Questions
+
+<details>
+<summary>1. What is HTML?</summary>
+HTML (HyperText Markup Language) is the standard language used to create web pages. It defines the structure of a webpage using markup. HTML uses tags to describe the structure and elements of the content on the page.
+</details>
+
+<details>
+<summary>2. What are HTML elements?</summary>
+HTML elements consist of a start tag, content, and an end tag. For example, `<p>This is a paragraph.</p>` is an HTML element. The start tag is `<p>`, the content is "This is a paragraph.", and the end tag is `</p>`.
+</details>
+
+<details>
+<summary>3. What is the difference between an HTML tag and an HTML element?</summary>
+- An HTML tag refers to the markup code used to define elements, like `<div>` or `<h1>`.
+- An HTML element consists of the tag along with the content inside it, such as `<div>Content</div>`.
+</details>
+
+<details>
+<summary>4. What is the purpose of the `<!DOCTYPE html>` declaration?</summary>
+The `<!DOCTYPE html>` declaration specifies the HTML version and helps the browser render the page correctly. It ensures the document is treated as HTML5, which is the latest version of HTML.
+</details>
+
+<details>
+<summary>5. What is the difference between inline and block-level elements in HTML? Can you give examples of each?</summary>
+- Block-level elements take up the full width of their parent container and start on a new line, like `<div>`, `<h1>`, and `<p>`.
+- Inline elements only take up as much width as their content, and do not break onto a new line, such as `<span>`, `<a>`, and `<img>`.
+</details>
+
+## HTML Tags & Attributes
+
+<details>
+<summary>6. What is the difference between the `<div>` and `<span>` tags in HTML?</summary>
+- `<div>` is a block-level element used to group content together.
+- `<span>` is an inline element used to apply styles or group inline content without breaking the flow of the document.
+</details>
+
+<details>
+<summary>7. What are semantic HTML tags? Can you list a few examples?</summary>
+Semantic HTML tags give meaning to the content inside them, improving accessibility and SEO. Examples include `<header>`, `<footer>`, `<article>`, `<section>`, and `<nav>`.
+</details>
+
+<details>
+<summary>8. Explain the `alt` attribute for images. Why is it important for accessibility and SEO?</summary>
+The `alt` attribute provides alternative text for an image. It is important for accessibility because screen readers use it to describe images to visually impaired users. It also helps search engines understand the image content, improving SEO.
+</details>
+
+<details>
+<summary>9. What is the `href` attribute used for in anchor tags (`<a>`) in HTML?</summary>
+The `href` (Hypertext Reference) attribute specifies the URL of the page the link goes to. Example: `<a href="https://example.com">Visit Example</a>`.
+</details>
+
+<details>
+<summary>10. What is the role of the `meta` tag in the HTML `<head>` section?</summary>
+The `meta` tag provides metadata about the HTML document, such as character encoding (`<meta charset="UTF-8">`), author information, and viewport settings. It is crucial for SEO and improving the user experience.
+</details>
+
+## Forms and Input Elements
+
+<details>
+<summary>11. What are the different types of input elements in HTML?</summary>
+HTML provides various input types to collect different types of user data:
+- `text`: Single-line text input.
+- `email`: Validates an email address.
+- `password`: Hides input for passwords.
+- `radio`: Select one option from a set.
+- `checkbox`: Select multiple options.
+- `date`: Date picker.
+- `number`: Numeric input.
+</details>
+
+<details>
+<summary>12. What is the purpose of the `required` attribute in form elements?</summary>
+The `required` attribute ensures the user cannot submit the form without filling out the field. It is used for validation on the client side.
+</details>
+
+<details>
+<summary>13. Explain the difference between the `readonly` and `disabled` attributes in form elements.</summary>
+- `readonly`: Prevents the user from editing the field but still allows the value to be submitted with the form.
+- `disabled`: Prevents the user from editing or interacting with the field. Disabled fields are not submitted with the form.
+</details>
+
+## Advanced HTML Features
+
+<details>
+<summary>14. What are the `draggable` and `drop` attributes used for in HTML?</summary>
+- The `draggable` attribute makes an element draggable, enabling users to drag and drop items.
+- The `drop` attribute is used in conjunction with `dragover` to specify the target for dropped items.
+</details>
+
+<details>
+<summary>15. What is the `contenteditable` attribute and how does it work?</summary>
+The `contenteditable` attribute allows users to edit the content of an element directly in the browser. It is often used for rich text editors or to create editable sections in web pages.
+</details>
+
+<details>
+<summary>16. Explain the `autofocus` attribute in HTML. What elements can it be used with?</summary>
+The `autofocus` attribute automatically focuses on an element when the page loads. It is commonly used with form input fields like textboxes or buttons.
+</details>
+
+<details>
+<summary>17. What is the `hidden` attribute in HTML? Can you explain when you would use it?</summary>
+The `hidden` attribute hides an element from view, while keeping it in the DOM. It is useful when you need to hide content temporarily or dynamically.
+</details>
+
+<details>
+<summary>18. What are the common ways to embed multimedia content (like audio and video) into an HTML page?</summary>
+You can use the `<audio>` and `<video>` tags to embed media content. Example for video:
+
+```html
+<video controls>
+  <source src="movie.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
