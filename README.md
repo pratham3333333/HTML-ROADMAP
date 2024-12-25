@@ -1,4 +1,4 @@
-# Day 1: HTML Roadmap 🚀  
+#HTML Roadmap 🚀  
 
 Welcome to Day 1 of your HTML learning journey! This guide will introduce you to the foundational concepts of web design and development. By the end of the day, you’ll understand HTML basics and its essential role in creating web pages. Let’s dive in! 🌟  
 
